@@ -1,0 +1,12 @@
+body {
+    background: linear-gradient(130.49deg, #ACD7F2 13.33%, #0487D9 79.38%) no-repeat;
+    background-attachment: fixed;
+}
+
+.article {
+    margin-top: 80px;
+}
+
+.title-article h3 {
+    font-weight: bold;
+}

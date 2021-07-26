@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/articles.css') }}">
+{% endblock %}
+{% block title %}Articles{% endblock %}
+{% block body %}
+    <div class="container articles">
+        {% for element in articles %}
+            <div class="container article">
+                <div class="container title-article">
+                    <h3>{{ element.title }}</h3>
+                </div>
+                <div class="container main-article">
+                    <div class="container intro-article">
+                        <p>{{ element.intro }}</p>
+                    </div>
+
+                </div>
+                <div class="container bottom-article">
+                    <b>Дата: {{ element.date.date() }}</b>
+                    <a href="/articles/{{ element.id }}" class="nav-link">
+                        <button type="button" class="btn btn-dark">more detailed</button>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

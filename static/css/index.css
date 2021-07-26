@@ -1,0 +1,27 @@
+body {
+    background: linear-gradient(128.25deg, #ACD7F2 14.9%, #0487D9 80.44%) no-repeat;
+    overflow:  hidden;
+}
+
+.index-container {
+    margin-top: 145px;
+}
+
+.col-6 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.el-offer:first-child {
+    margin-top: 100px;
+}
+
+
+.el-offer {
+    padding: 0;
+    margin-top: 23px;
+}
+
+.feedback {
+    margin-left: 0;
+}

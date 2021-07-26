@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/each-article.css') }}">
+{% endblock %}
+{% block title %}{{ article.title }}{% endblock %}
+{% block body %}
+    <div class="container article">
+        <div class="container title-article">
+            <h3>{{ article.title }}</h3>
+        </div>
+        <div class="container bottom-article">
+            <p>Дата: {{ article.date.date() }}</p>
+        </div>
+        <div class="container main-article">
+            <p>{{ article.text_article }}</p>
+        </div>
+    </div>
+
+{% endblock %}
