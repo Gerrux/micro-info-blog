@@ -14,6 +14,10 @@
         <div class="container main-article">
             <p>{{ article.text_article }}</p>
         </div>
+    <div class="container">
+        <a href="/articles/{{ article.id }}/delete" class="btn btn-danger">Удалить</a>
+        <a href="/articles/{{ article.id }}/update" class="btn btn-success">Редактировать</a>
+    </div>
     </div>
 
 {% endblock %}

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/create-article.css') }}">
+{% endblock %}
+{% block title %}Редактирование статьи{% endblock %}
+{% block body %}
+    <div class="container intro-text">
+        <h2>Update article</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nibh rutrum viverra sagittis. Vitae elementum
+            sapien vitae tempor id duis a amet. Viverra erat ante lacus odio. Felis suspendisse eget mattis volutpat
+            lectus.
+        </p>
+    </div>
+
+    <form method="post">
+        <div class="container">
+            <div class="container form">
+                <div class="row">
+                    <div class="mb-3 col-sm">
+                        <label for="title" class="form-label">Title article</label>
+                        <textarea class="form-control" name="title" id="title" rows="3" value={{ article.title }}></textarea>
+                    </div>
+                    <div class="mb-3 col-sm">
+                        <label for="intro" class="form-label">Introduction</label>
+                        <textarea class="form-control" name="intro" id="intro" rows="3" value={{ article.intro }}></textarea>
+                    </div>
+                </div>
+                <div class="mb-3 main-text">
+                    <label for="text_article" class="form-label">Main text article</label>
+                    <textarea class="form-control" name="text_article" id="text_article" rows="3" value={{ article.text_article }}></textarea>
+                </div>
+            </div>
+            <div>
+                <input type='submit' value="Update" class="btn btn-primary btn-submit">
+            </div>
+        </div>
+    </form>
+
+{% endblock %}
