@@ -5,6 +5,8 @@
 {% block title %}Articles{% endblock %}
 {% block body %}
     <div class="container articles">
+
+        {% if articles|length > 0 %}
         {% for element in articles %}
             <div class="container article">
                 <div class="container title-article">
@@ -24,5 +26,8 @@
                 </div>
             </div>
         {% endfor %}
+        {% else %}
+        <h3>На сайте пока ещё нет статей</h3>
+        {% endif %}
     </div>
 {% endblock %}
